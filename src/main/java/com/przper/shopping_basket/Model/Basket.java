@@ -1,14 +1,24 @@
-package Model;
+package com.przper.shopping_basket.Model;
 
 import java.util.Map;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "baskets")
 public class Basket {
-	private Map<Item,Integer> orderedItems;
+	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer basketId;
+	private @ElementCollection Map<Item, Integer> orderedItems;
 
 	public Basket() {
 		super();
 	}
-	
+
 	public Basket(Map<Item, Integer> orderedItems) {
 		super();
 		this.orderedItems = orderedItems;

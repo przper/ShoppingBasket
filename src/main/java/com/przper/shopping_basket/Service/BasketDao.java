@@ -1,4 +1,4 @@
-package Service;
+package com.przper.shopping_basket.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,8 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import Model.Basket;
-import Model.Item;
+import com.przper.shopping_basket.Model.Basket;
+import com.przper.shopping_basket.Model.Item;
 
 public class BasketDao implements BasketDaoInterface {
 
@@ -23,7 +23,7 @@ public class BasketDao implements BasketDaoInterface {
 		availableItems.add(new Item(6, "Avocados", 9.44d));
 		availableItems.add(new Item(7, "Cucumbers", 3.17d));
 	}
-
+	
 	@Override
 	public void addItem(Basket basket, Item item, int quantity) {
 		Map<Item,Integer> map = new HashMap<>();

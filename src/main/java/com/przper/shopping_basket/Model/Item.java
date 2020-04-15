@@ -1,7 +1,15 @@
-package Model;
+package com.przper.shopping_basket.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "items")
 public class Item {
-	private Integer itemId;
+	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer itemId;
 	private String name;
 	private double price;
 	

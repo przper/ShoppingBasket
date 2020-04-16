@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "baskets")
 public class Basket {
-	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer basketId;
+	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
 	private @ElementCollection Map<Item, Integer> orderedItems;
 
 	public Basket() {

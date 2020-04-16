@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "items")
 public class Item {
-	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer itemId;
+	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Integer id;
 	private String name;
 	private double price;
 	
@@ -25,16 +25,16 @@ public class Item {
 	
 	public Item(Integer itemId, String name, double price) {
 		super();
-		this.itemId = itemId;
+		this.id = itemId;
 		this.name = name;
 		this.price = price;
 	}
 
 	public Integer getItemId() {
-		return itemId;
+		return id;
 	}
 	public void setItemId(Integer itemId) {
-		this.itemId = itemId;
+		this.id = itemId;
 	}
 	public String getName() {
 		return name;
